@@ -10,10 +10,10 @@ services:
       - ./.env
 
   web:
-    build: ~/infra_sp2/api_yamdb/
+    image: voyager1744/api_yamdb:v1
     restart: always
     ports:
-     - "8000:8000"
+      - "8000:8000"
     # "зависит от", 
     depends_on:
       - db
