@@ -1,9 +1,7 @@
+from django.db.models import Avg
 from rest_framework import serializers
 from rest_framework.relations import SlugRelatedField
-from django.db.models import Avg
-
-from reviews.models import User, Comment, Review
-from reviews.models import Title, Genre, Category
+from reviews.models import Category, Comment, Genre, Review, Title, User
 
 
 class UserSerializer(serializers.ModelSerializer):

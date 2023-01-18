@@ -1,25 +1,24 @@
 import uuid
 
+from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
-from django.conf import settings
-from rest_framework import permissions, pagination, viewsets
-from rest_framework import status, filters
-from rest_framework.decorators import api_view, action
+from rest_framework import filters, pagination, permissions, status, viewsets
+from rest_framework.decorators import action, api_view
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
+from reviews.models import Category, Genre, Review, Title, User
 
-from reviews.models import User, Title, Category, Genre, Review
 from .filters import TitleFilter
 from .mixins import CreateListDestroyMixinSet
 from .paginator import CommentPagination
-from .permissions import (AuthorAndStaffOrReadOnly,
-                          IsAdminOrReadOnly, OwnerOrAdmins)
-from .serializers import (CategorySerializer, GenreSerializer, TitleSerializer,
-                          TitleCreateSerializer)
-from .serializers import MeSerializer, SignUpSerializer, UserSerializer
-from .serializers import TokenSerializer, ReviewsSerializer, CommentsSerializer
+from .permissions import (AuthorAndStaffOrReadOnly, IsAdminOrReadOnly,
+                          OwnerOrAdmins)
+from .serializers import (CategorySerializer, CommentsSerializer,
+                          GenreSerializer, MeSerializer, ReviewsSerializer,
+                          SignUpSerializer, TitleCreateSerializer,
+                          TitleSerializer, TokenSerializer, UserSerializer)
 
 
 @api_view(['POST'])
