@@ -22,6 +22,8 @@ jobs:
           # установка зависимостей
           cd api_yamdb/
           pip install -r requirements.txt
+          cd ../infra/
+
       - name: Test with flake8 and pytest
         run: |
           # запуск проверки проекта по flake8
