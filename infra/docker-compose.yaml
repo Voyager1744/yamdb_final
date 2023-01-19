@@ -10,7 +10,7 @@ services:
       - ./.env
 
   web:
-    image: voyager1744/api_yamdb:v1
+    image: voyager1744/api_yamdb:latest
     restart: always
     ports:
       - "8000:8000"
