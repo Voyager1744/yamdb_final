@@ -6,7 +6,7 @@ COPY api_yamdb/requirements.txt /app
 
 RUN pip install --upgrade pip
 
-RUN pip3 install -r api_yamdb/requirements.txt --no-cache-dir
+RUN pip3 install -r app/requirements.txt --no-cache-dir
 
 COPY api_yamdb/ /app
 
