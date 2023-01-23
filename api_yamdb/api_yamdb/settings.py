@@ -11,9 +11,10 @@ ADMIN_EMAIL = 'admin@email.com'
 DEBUG = False
 
 ALLOWED_HOSTS = [
+    '158.160.55.181',
     'localhost',
     '127.0.0.1',
-    '158.160.55.181',
+    '*',
 ]
 
 AUTH_USER_MODEL = 'reviews.User'
@@ -106,9 +107,9 @@ REST_FRAMEWORK = {
 
 # Internationalization
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-Ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
